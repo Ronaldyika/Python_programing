@@ -66,3 +66,5 @@ numbers = list(range(2,22))
 print(max(numbers))#returns 21 since the highest number is 21
 print(min(numbers))#returns 2
 print(sum(numbers))#sum the individual items in the list and displays the ans
+#for number in numbers:
+    #print(sqrt(number))
