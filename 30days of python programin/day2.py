@@ -8,3 +8,4 @@ age = int(input('input your age: '))
 detail = ("my name is "+ name  + " and i am "+str(age)+ "years old");
 
 print(detail)
+
