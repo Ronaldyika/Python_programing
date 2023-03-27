@@ -10,6 +10,7 @@ family_info = {
 }
 
 print(family_info)
+print('the above is a dictionary')
 
 
 for key in family_info:
