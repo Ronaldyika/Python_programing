@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simple form in django</title>
+    <!--{% load crispy_forms_filters %}
+    {% load crispy_forms_tags %}-->
+    <style>
+
+        section{
+            width: 35rem;
+            margin: auto;
+            height: 40vh;
+            background-color: beige;
+            border-color: black;
+            border-radius: 1rem;
+        }
+        .title{
+            color: black;
+            background: skyblue;
+        }
+        h2{
+            align-items: center;
+            margin-left: 15rem;
+        }
+        input{
+            height: 1.5rem;
+            width: 65%;
+            margin-left: 6rem;
+            border-radius: 0.5rem;
+
+        }
+        .pwd{
+            margin-left: 4.5rem;
+        }
+        input[type='submit']{
+            width: 6rem;
+            margin-left: 15rem;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="form">
+        <div class="title"><h2>Yika's</h2></div><br>
+        <form action="" class="main" method="POST">{% csrf_token %}
+            <label for="name">Name
+                <input type="text" name="name">
+            </label><br><br>
+            <label for="email">Email
+                <input type="email" name="email">
+            </label><br><br>
+            <label for="password">Password
+                <input class="pwd" type="password" name="password">
+            </label><br><br>
+            <input type="submit">
+        </form>
+        </section>
+</body>
+</html>
