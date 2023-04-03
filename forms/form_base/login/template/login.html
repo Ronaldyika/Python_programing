@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>django login page</title>
+    <style>
+        body{
+            background-image: url(/login/wp5847816-animation-movies-wallpapers.jpg);
+            border-collapse: collapse;
+            background-repeat: no-repeat;
+        }
+        .content{
+            margin: auto;
+            width: 45%;
+            height: 45vh;
+            background-color: antiquewhite;
+            opacity: 90%;
+        }
+        .main{
+            background-color: skyblue;
+            height: 5vh;
+            align-items: center;
+        }
+        h3{
+            margin-left: 90%;
+        }
+        input{
+            height: 1.5rem;
+            width: 80%;
+        }
+        input[type='submit']{
+            width: 20%;
+            display: flex;
+            margin-left: 55%;
+            margin-top: -2rem;
+            align-items: center;
+            background: rgb(173, 222, 241);
+            border-radius: 1rem;
+        }
+        textarea{
+            margin-left: 12%;
+        }
+    </style>
+</head>
+<body>
+    <header class="content">
+        <div class="main">
+            <h3>R-Tera</h3>
+        </div><br>
+        <form action="" method="POST">{% csrf_token %}
+            <label for="name">Username: 
+                <input type="text" name="username" placeholder="input username"><br><br>
+            </label>
+            <label for="password">Password:
+                <input type="password" name="password" placeholder="enter password" >
+            </label><br><br>
+            <textarea name="text" id="text" cols="30" rows="9" placeholder="send me a secret message"></textarea>
+
+            <input  type="submit">
+        </form>
+    </header>
+</body>
+</html>
