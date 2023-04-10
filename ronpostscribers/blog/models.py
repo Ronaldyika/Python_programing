@@ -8,5 +8,8 @@ class postmodel(models.Model):
     author = models.ForeignKey(User,on_delete=models.CASCADE)
     datecreated = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        ordering = ('-datecreated',)
+
     def __str__(self):
         return self.title
