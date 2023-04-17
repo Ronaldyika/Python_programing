@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yika's authentication</title>
+</head>
+<body>
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+        <b>message</b>{{ message }}
+        <button type="button" class="close"></button>
+        <span aria-hidden = 'true'>&times;</span>
+    </div>
+    {% endfor %}
+    <h3>welcome to yika's signup page</h3>
+
+    {% if user.authenticate %}
+    <h2>hello {{ firstname }}</h2>
+    <h3>you have successfully login</h3>
+    <button type="submit"><a href="/signout">signout</a></button>
+    {% else %}
+
+    <button type="submit"><a href="/signup">signup</a></button>
+    <button type="submit"><a href="/signin">signin</a></button>
+    {% endif %}
+
+
+</body>
+</html>
