@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this is the  link page</title>
+</head>
+<body>
+    <h1 class="display2">User List</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Action</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{user.id}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.email}}</td>
+
+            <a href="{% url 'update.html' user.id %}">Edit</a>
+            <form action="{% url 'delete' user.id %}" method="post">
+                <input type="submit" value="delete">
+            </form>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{% url 'create' %}">createuser</a>
+</body>
+</html>
