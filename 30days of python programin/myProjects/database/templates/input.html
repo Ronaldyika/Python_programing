@@ -10,34 +10,39 @@
 
 </head>
 <body>
-    <h2 class="display-3">welcome to ur info submition portal</h2>
+    <div class="container bg-white mt-5" style="border: rgb(194, 182, 182) solid 1px; ">
+        <div class="head bg-info " style="height: 10vh;">
+            <h2 class="display-5 text-center  border-3px">welcome to ur info submition portal</h2>
+        </div>
     <div class="container">
         <form  class="form-group" method="POST">
             {% csrf_token %}
             <div class="row">
-                <div class="col-6">
+                <div class="col-md-12 text-center my-2 mt-4">
                     <label for="name">Name</label>
-                    <input type="text" name="name" placeholder="input your name here">
+                    <input type="text" name="name" style="width: 18rem; margin-left: 4rem;" placeholder="input your name here">
                 </div>
-                <div class="col-6">
-                    <label for="school">School</label>
-                    <input type="text" name="school" placeholder="input your school">
+                <div class="col-md-12 text-center my-2 mt-4">
+                    <label for="school" >School</label>
+                    <input type="text" name="school" style="width: 18rem; margin-left: 4rem;" placeholder="input your school">
                 </div>
-                <div class="col-6">
+                <div class="col-md-12 text-center my-2">
                     <label for="department">department</label>
-                    <input type="text" name="department" placeholder="input your department">
+                    <input type="text" name="department" style="width: 18rem; margin-left: 2rem;" placeholder="input your department">
                 </div>
-                <div class="col-6">
+                <div class="col-md-12 text-center my-2">
                     <label for="subjects">subjects</label>
-                    <input type="text" name="subjects" placeholder="input the subjects you offer here">
+                    <input type="text" name="subjects" style="width: 18rem; margin-left: 3.2rem;" placeholder="input the subjects you offer here">
                 </div>
             </div>
             <div class="button btn-button">
-                <input type="submit" value="save">
+                <input type="submit" style=" margin-left: 44%; margin-top: 3rem;"value=" save">
+                <button class="btn-button "style="margin-left: 7%; margin-top: 3rem; position:absolute;"><a href="{% url 'database' %}">check data</a></button>
                 
             </div>
-            <button class="btn-button"><a href="{% url 'database' %}">check data</a></button>
+           
         </form>
+    </div>
     </div>
     <!--my js is here -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
