@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration site</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <form method="post" class="form-group">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-6">
+                    <input type="text" id="name" required="True" placeholder="input your name" name="name">
+                </div>
+                <div class="col-6">
+                    <input type="email" id="email" required="True" placeholder="input your email" name="email">
+                </div>
+                <div class="col-6">
+                    <input type="password" id="password" required="True" placeholder="enter password " name="password">
+                </div>
+                <div class="col-6">
+                    <input type="password" id="password1" required="True" placeholder="confirm password" name="password1">
+                </div>
+                <div class="buttonbtn-button">
+                    <button type="submit">register</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
